@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TilkiNetwork</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://mc4fun.net/storage/themes/bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      padding: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    .discord {
+      display: flex;
+      align-items: center;
+      background: #7289da;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      width: fit-content;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .discord i {
+      margin-right: 10px;
+    }
+    .button {
+      background-color: orange;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="tilki-logo.png" alt="TilkiNetwork Logo">
+    <nav>
+      <a href="#">Anasayfa</a>
+      <a href="#kayit">Kayıt Ol</a>
+      <a href="#giris">Giriş Yap</a>
+      <a href="#sunucu">Sunucu Bilgileri</a>
+      <a href="#vip">VIP Satın Al</a>
+      <a href="#kredi">Kredi Satın Al</a>
+      <a href="#basvuru">Yetkili Başvurusu</a>
+      <a href="#forum">Forum</a>
+    </nav>
+    <a class="discord" href="https://discord.gg/9egRJtrC34" target="_blank">
+      <i class="fab fa-discord"></i> Discord'a Katıl
+    </a>
+  </header>
+
+  <div class="section" id="sunucu">
+    <h2>Sunucu Bilgileri</h2>
+    <p>TilkiNetwork Minecraft Sunucusu</p>
+    <p>IP: <strong>tilkinw.mcsv.com.tr</strong></p>
+    <p>Sürüm: <strong>1.16.5 - 1.20.4</strong></p>
+  </div>
+
+  <div class="section" id="vip">
+    <h2>VIP Satın Al</h2>
+    <button class="button" onclick="kontrolEt('vip')">VIP Satın Al</button>
+  </div>
+
+  <div class="section" id="kredi">
+    <h2>Kredi Satın Al</h2>
+    <button class="button" onclick="kontrolEt('kredi')">Kredi Satın Al</button>
+  </div>
+
+  <div class="section" id="basvuru">
+    <h2>Yetkili Başvurusu</h2>
+    <button class="button" onclick="kontrolEt('basvuru')">Başvuru Yap</button>
+  </div>
+
+  <script>
+    function kontrolEt(hedef) {
+      const girisYaptiMi = false; // Giriş kontrolü burada yapılmalı (örnek)
+      if (!girisYaptiMi) {
+        alert("Bu işlemi gerçekleştirmek için önce giriş yapmalısınız!");
+        window.location.href = '#giris';
+      } else {
+        window.location.href = '#' + hedef;
+      }
+    }
+  </script>
+</body>
+</html>
